@@ -1,7 +1,9 @@
+const selectionArray = ["Rock, Paper, Scissors"];
+
 function computerPlay() {
-  const computerArray = ["Rock, Paper, Scissors,"];
-  const random = Math.floor(Math.random() * computerArray.length);
-  console.log(computerArray[random]);
+  let randomVal = Math.floor(Math.random() * computerArray.length);
+  let returnVal = selectionArray[randomVal];
+  return returnVal;
 }
 
 // for (let i = 0; i < 5; i++) {
@@ -14,19 +16,18 @@ function playRound(playerSelection, computerSelection) {
     // Print Draw
   } else if (
     (playerSelection == "rock" && computerSelection == "scissors") ||
-    (playerselection == "scissors" && computerSelection == "paper") ||
+    (playerSelection == "scissors" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "rock")
   ) {
     //Print player one wins
   } else if (
     (playerSelection == "rock" && computerSelection == "paper") ||
-    (playerselection == "scissors" && computerSelection == "rock") ||
+    (playerSelection == "scissors" && computerSelection == "rock") ||
     (playerSelection == "paper" && computerSelection == "scissors")
   ) {
     //Print computer wins
   }
 }
-
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+// const playerSelection = "rock";
+// const computerSelection = computerPlay();
+// console.log(playRound(playerSelection, computerSelection));
