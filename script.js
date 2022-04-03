@@ -1,33 +1,31 @@
-const selectionArray = ["Rock, Paper, Scissors"];
-
 function computerPlay() {
-  let randomVal = Math.floor(Math.random() * computerArray.length);
-  let returnVal = selectionArray[randomVal];
-  return returnVal;
+  const choiceArray = ["rock", "paper", "scissors"];
+  const randomVal = Math.floor(Math.random() * choiceArray.length);
+  return choiceArray[randomVal];
 }
 
-// for (let i = 0; i < 5; i++) {
-//   // your code here!
-// }
-
 function playRound(playerSelection, computerSelection) {
-  // your code here!
   if (playerSelection === computerSelection) {
-    // Print Draw
+    return "DRAW";
   } else if (
     (playerSelection == "rock" && computerSelection == "scissors") ||
     (playerSelection == "scissors" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "rock")
   ) {
-    //Print player one wins
+    return "PLAYER ONE WINS!";
   } else if (
     (playerSelection == "rock" && computerSelection == "paper") ||
     (playerSelection == "scissors" && computerSelection == "rock") ||
     (playerSelection == "paper" && computerSelection == "scissors")
   ) {
-    //Print computer wins
+    return "YOU LOSE!";
   }
 }
-// const playerSelection = "rock";
-// const computerSelection = computerPlay();
-// console.log(playRound(playerSelection, computerSelection));
+
+for (let i = 0; i < 5; i++) {
+  const computerSelection = computerPlay();
+  const playerSelection = "rock";
+  console.log("Player one: " + playerSelection);
+  console.log("AI: " + computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+}
