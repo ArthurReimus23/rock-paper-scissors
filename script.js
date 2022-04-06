@@ -27,24 +27,24 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  for (let i = 0; i < 5; i++) {
-    const computerSelection = computerPlay();
-    const playerSelection = "rock";
-    console.log("Player one: " + playerSelection);
-    console.log("AI: " + computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(
-      "Score\nPlayer: " + playerScore + " Computer: " + computerScore
-    );
-  }
-  if (playerScore > computerScore) {
-    console.log("Congratulations, you won the game!");
-  } else if (playerScore < computerScore) {
-    console.log("You loss. Better luck next time");
-  } else {
-    console.log("DRAW. Try playing again.");
-  }
-}
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     const computerSelection = computerPlay();
+//     const playerSelection = "rock";
+//     console.log("Player one: " + playerSelection);
+//     console.log("AI: " + computerSelection);
+//     console.log(playRound(playerSelection, computerSelection));
+//     console.log(
+//       "Score\nPlayer: " + playerScore + " Computer: " + computerScore
+//     );
+//   }
+//   if (playerScore > computerScore) {
+//     console.log("Congratulations, you won the game!");
+//   } else if (playerScore < computerScore) {
+//     console.log("You loss. Better luck next time");
+//   } else {
+//     console.log("DRAW. Try playing again.");
+//   }
+// }
 
-game(); //play the game 5 times
+// game(); //play the game 5 times
