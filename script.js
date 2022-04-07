@@ -1,6 +1,11 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const playerChoiceDisplay = document.createElement("h1");
+const computerChoiceDisplay = document.createElement("h1");
+
+const choices = ["rock", "paper", "scissors"];
+
 function computerPlay() {
   const choiceArray = ["rock", "paper", "scissors"];
   const randomVal = Math.floor(Math.random() * choiceArray.length);
