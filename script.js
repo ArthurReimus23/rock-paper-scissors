@@ -19,6 +19,8 @@ const buttonClick = (e) => {
   playerChoiceDisplay.innerHTML = "Player: " + playerChoice.toUpperCase();
   randomComputerChoice();
   playRound();
+  displayGrid.appendChild(playerChoiceDisplay);
+  displayGrid.appendChild(computerChoiceDisplay);
 };
 
 for (let i = 0; i < choices.length; i++) {
@@ -29,8 +31,6 @@ for (let i = 0; i < choices.length; i++) {
   gameGrid.appendChild(button);
 }
 
-displayGrid.appendChild(playerChoiceDisplay);
-displayGrid.appendChild(computerChoiceDisplay);
 resultGrid.appendChild(resultDisplay);
 
 const randomComputerChoice = () => {
